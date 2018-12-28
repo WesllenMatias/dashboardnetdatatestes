@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DashBoard</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+    <!-- here we will add dashboard.js -->
+    <script type="text/javascript" src="http://192.168.11.24:19999/dashboard.js"></script>
+    <!-- <script type="text/javascript" src="http://192.168.1.2:19999/dashboard.js"></script>
+    <script type="text/javascript" src="http://192.168.11.5:19999/dashboard.js"></script> -->
+    
+</head>
+<body background="#1C1C1C">
+
+<nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
+ 
+ <a class="navbar-brand" href="#">Dashboard Monitoramento</a>
+  
+</nav>
+
+
+<!-- here we will add charts -->
+
+<div class="container-fluid">
+
+            <div class="card border-dark" style="max-width: 50rem;">
+                <div class="card-header">
+                    <button type="button" class="btn btn-info">CPD-01</button>
+                </div> 
+                    <div class="card-body">   
+                        <div style="width: 100%; text-align: left;">
+                            <div data-netdata="system.cpu"
+                            	 data-host="http://192.168.11.24:19999/"
+                                 data-dimensions="user"
+                                 data-chart-library="gauge"
+                                 data-width="150px"
+                                 data-after="-60"
+                                 data-points="60"
+                                 data-title="Uso Total CPU"
+                                 data-units="I am alive!"
+                                 data-gauge-max="100"
+                                 data-gauge-min="0"
+                                 data-colors="#FF4444"
+                             ></div>
+                                <div data-netdata = "system.ram" 
+                                 data-host="http://192.168.11.24:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-title="Memoria Livre"
+                                 data-colors="#00FF7F"
+                                 data-width ="100px"
+                                 data-height="100px"
+                                 data-units="MB"
+                                 data-easypiechart-max-value = "16000"
+                                 data-easypiechart-min-value = "0" 
+                                 > </div>
+                                 <div data-netdata = "disk_util.sda" 
+                                 data-host="http://192.168.11.24:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-title="I/O Disk"
+                                 data-width ="100px"
+                                 data-height="100px"
+                                 data-units="%"
+                                 data-easypiechart-max-value = "100"
+                                 data-easypiechart-min-value = "0" 
+                                 > </div>
+                        </div>     
+                    </div>    
+            </div>
+                        <div class="card border-dark" style="max-width: 50rem;">
+                <div class="card-header">
+                    <button type="button" class="btn btn-info">SRV-BANCO-CISS</button>
+                </div> 
+                    <div class="card-body">   
+                        <div style="width: 100%; text-align: left;">
+                            <div data-netdata="system.cpu"
+                                 data-host="http://192.168.1.2:19999/"
+                                 data-dimensions="user"
+                                 data-chart-library="gauge"
+                                 data-width="150px"
+                                 data-after="-60"
+                                 data-points="60"
+                                 data-title="Uso Total CPU"
+                                 data-units="I am alive!"
+                                 data-gauge-max="100"
+                                 data-gauge-min="0"
+                                 data-colors="#FF4444"
+                             ></div>
+                                <div data-netdata = "system.ram" 
+                                 data-host="http://192.168.1.2:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-title="Memoria Livre"
+                                 data-colors="#00FF7F"
+                                 data-width ="100px"
+                                 data-height="100px"
+                                 data-units="MB"
+                                 data-easypiechart-max-value = "16000"
+                                 data-easypiechart-min-value = "0" 
+                                 > </div>
+                                 <div data-netdata = "disk_util.sda" 
+                                 data-host="http://192.168.1.2:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-title="I/O Disk"
+                                 data-width ="100px"
+                                 data-height="100px"
+                                 data-units="%"
+                                 data-easypiechart-max-value = "100"
+                                 data-easypiechart-min-value = "0" 
+                                 > </div>
+                        </div>     
+                    </div>    
+            </div>
+                        <div class="card border-dark" style="max-width: 50rem;">
+                <div class="card-header">
+                    <button type="button" class="btn btn-info">SRV-PROXMOX-LJ1</button>
+                </div> 
+                    <div class="card-body">   
+                        <div style="width: 100%; text-align: left;">
+                            <div data-netdata="system.cpu"
+                                 data-host="http://192.168.11.5:19999/"
+                                 data-dimensions="user"
+                                 data-chart-library="gauge"
+                                 data-width="150px"
+                                 data-after="-60"
+                                 data-points="60"
+                                 data-title="Uso Total CPU"
+                                 data-units="I am alive!"
+                                 data-gauge-max="100"
+                                 data-gauge-min="0"
+                                 data-colors="#FF4444"
+                             ></div>
+                                <div data-netdata = "system.ram" 
+                                 data-host="http://192.168.11.5:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-title="Memoria Livre"
+                                 data-colors="#00FF7F"
+                                 data-width ="100px"
+                                 data-height="100px"
+                                 data-units="MB"
+                                 data-easypiechart-max-value = "16000"
+                                 data-easypiechart-min-value = "0" 
+                                 > </div>
+                                 <div data-netdata = "disk_util.sda" 
+                                 data-host="http://192.168.11.5:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-title="I/O Disk"
+                                 data-width ="100px"
+                                 data-height="100px"
+                                 data-units="%"
+                                 data-easypiechart-max-value = "100"
+                                 data-easypiechart-min-value = "0" 
+                                 > </div>
+                        </div>     
+                    </div>    
+            </div>
+
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
