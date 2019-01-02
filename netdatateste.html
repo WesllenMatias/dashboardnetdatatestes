@@ -116,11 +116,16 @@
                                  data-after="-360"
                                  data-points="360" 
                                  > </div>
+                                <div>
+                                    <a href="#">
+                                         <img src="http://192.168.11.24:19999/api/v1/badge.svg?chart=system.uptime"></img>
+                                    </a>
+                                </div>
                         </div>     
                     </div>    
             </div>
             <p></p>
-        <div class="card border-dark" style="max-width: 50rem;">
+                        <div class="card border-dark" style="max-width: 50rem;">
                 <div class="card-header">
                     <button type="button" class="btn btn-info">SRV-BANCO-CISS</button>
                 </div> 
@@ -130,13 +135,14 @@
                                  data-host="http://192.168.1.2:19999/"
                                  data-dimensions="user"
                                  data-chart-library="gauge" 
-                                 data-width="150px"
-                                 data-after="-360"
-                                 data-points="360"
+                                 data-width="50%"
+                                 data-after="-240"
+                                 data-points="240"
                                  data-title="Uso Total CPU"
-                                 data-units="%!"
+                                 data-units="%"
                                  data-gauge-max-value="100"
                                  data-colors="#FF4444"
+                                 roule="application"
                              ></div>
                                 <div data-netdata = "system.ram" 
                                  data-host="http://192.168.1.2:19999/"
@@ -145,7 +151,7 @@
                                  data-append-options="percentage"
                                  data-title="Memoria Usada"
                                  data-colors="#00FF7F"
-                                 data-width ="100px"
+                                 data-width ="40%"
                                  data-height="100px"
                                  data-units="%"
                                  data-easypiechart-max-value="100"
@@ -198,11 +204,16 @@
                                  data-after="-360"
                                  data-points="360" 
                                  > </div>
+                                <div>
+                                    <a href="#">
+                                         <img src="http://192.168.1.2:19999/api/v1/badge.svg?chart=system.uptime"></img>
+                                    </a>
+                                </div>
                         </div>     
                     </div>    
-            </div>
+            </div>            
             <p></p>
-            <div class="card border-dark" style="max-width: 50rem;">
+                        <div class="card border-dark" style="max-width: 50rem;">
                 <div class="card-header">
                     <button type="button" class="btn btn-info">SRV-PROXMOX-LJ1</button>
                 </div> 
@@ -211,176 +222,349 @@
                             <div data-netdata="system.cpu"
                                  data-host="http://192.168.11.5:19999/"
                                  data-dimensions="user"
-                                 data-chart-library="gauge"
-                                 data-width="150px"
-                                 data-after="-60"
-                                 data-points="60"
+                                 data-chart-library="gauge" 
+                                 data-width="50%"
+                                 data-after="-240"
+                                 data-points="240"
                                  data-title="Uso Total CPU"
-                                 data-units="I am alive!"
-                                 data-gauge-max="100"
-                                 data-gauge-min="0"
+                                 data-units="%"
+                                 data-gauge-max-value="100"
                                  data-colors="#FF4444"
+                                 roule="application"
                              ></div>
                                 <div data-netdata = "system.ram" 
                                  data-host="http://192.168.11.5:19999/"
                                  data-chart-library="easypiechart"
-                                 data-title="Memoria Livre"
+                                 data-dimensions="used|buffers|active|wired"
+                                 data-append-options="percentage"
+                                 data-title="Memoria Usada"
                                  data-colors="#00FF7F"
-                                 data-width ="100px"
-                                 data-height="100px"
-                                 data-units="MB"
-                                 data-easypiechart-max-value = "16000"
-                                 data-easypiechart-min-value = "0" 
-                                 > </div>
-                                 <div data-netdata = "disk_util.sda" 
-                                 data-host="http://192.168.11.5:19999/"
-                                 data-chart-library="easypiechart"
-                                 data-title="I/O Disk"
-                                 data-width ="100px"
+                                 data-width ="40%"
                                  data-height="100px"
                                  data-units="%"
-                                 data-easypiechart-max-value = "100"
-                                 data-easypiechart-min-value = "0" 
+                                 data-easypiechart-max-value="100"
                                  > </div>
+                                 <div data-netdata = "system.io" 
+                                 data-host="http://192.168.11.5:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="in"
+                                 data-title="Leitura Disco"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.io.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360"
+                                 > </div>
+                                 <div data-netdata = "system.io" 
+                                 data-host="http://192.168.11.5:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="out"
+                                 data-title="Escrita Disco"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.io.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360"
+                                 > </div>
+                                 <div data-netdata = "system.net" 
+                                 data-host="http://192.168.11.5:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="received"                 
+                                 data-title="Net In"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.net.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360" 
+                                 > </div>
+                                 <div data-netdata = "system.net" 
+                                 data-host="http://192.168.11.5:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="sent"                 
+                                 data-title="Net Out"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.net.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360" 
+                                 > </div>
+                                <div>
+                                    <a href="#">
+                                         <img src="http://192.168.11.5:19999/api/v1/badge.svg?chart=system.uptime"></img>
+                                    </a>
+                                </div>
                         </div>     
                     </div>    
             </div>
 
         </div>
-        <div class="col-sm">
-            
-                                   
-                                        <div class="card border-dark" style="max-width: 50rem;">
-                                                    <div class="card-header">
-                                                        <button type="button" class="btn btn-info">SRV-RADIO</button>
-                                                    </div> 
-                                                        <div class="card-body">   
-                                                            <div style="width: 100%; text-align: center;">
-                                                                <div data-netdata="system.cpu"
-                                                                     data-host="http://192.168.11.29:19999/"
-                                                                     data-dimensions="user"
-                                                                     data-chart-library="gauge"
-                                                                     data-width="150px"
-                                                                     data-after="-60"
-                                                                     data-points="60"
-                                                                     data-title="Uso Total CPU"
-                                                                     data-units="I am alive!"
-                                                                     data-gauge-max="100,0"
-                                                                     data-gauge-min="0,0"
-                                                                     data-colors="#FF4444"
-                                                                 ></div>
-                                                                    <div data-netdata = "system.ram" 
-                                                                     data-host="http://192.168.11.29:19999/"
-                                                                     data-chart-library="easypiechart"
-                                                                     data-title="Memoria Livre"
-                                                                     data-colors="#00FF7F"
-                                                                     data-width ="100px"
-                                                                     data-height="100px"
-                                                                     data-units="MB"
-                                                                     data-easypiechart-max-value = "16000"
-                                                                     data-easypiechart-min-value = "0" 
-                                                                     > </div>
-                                                                     <div data-netdata = "disk_util.sda" 
-                                                                     data-host="http://192.168.11.29:19999/"
-                                                                     data-chart-library="easypiechart"
-                                                                     data-title="I/O Disk"
-                                                                     data-width ="100px"
-                                                                     data-height="100px"
-                                                                     data-units="%"
-                                                                     data-easypiechart-max-value = "100"
-                                                                     data-easypiechart-min-value = "0" 
-                                                                     > </div>
-                                                            </div>     
-                                                        </div>
-                                         </div>
+        <div class="col-sm">                                               
+                        <div class="card border-dark" style="max-width: 50rem;">
+                <div class="card-header">
+                    <button type="button" class="btn btn-info">SRV-RADIO</button>
+                </div> 
+                    <div class="card-body">   
+                        <div style="width: 100%; text-align: center;">
+                            <div data-netdata="system.cpu"
+                                 data-host="http://192.168.11.29:19999/"
+                                 data-dimensions="user"
+                                 data-chart-library="gauge" 
+                                 data-width="50%"
+                                 data-after="-240"
+                                 data-points="240"
+                                 data-title="Uso Total CPU"
+                                 data-units="%"
+                                 data-gauge-max-value="100"
+                                 data-colors="#FF4444"
+                                 roule="application"
+                             ></div>
+                                <div data-netdata = "system.ram" 
+                                 data-host="http://192.168.11.29:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="used|buffers|active|wired"
+                                 data-append-options="percentage"
+                                 data-title="Memoria Usada"
+                                 data-colors="#00FF7F"
+                                 data-width ="40%"
+                                 data-height="100px"
+                                 data-units="%"
+                                 data-easypiechart-max-value="100"
+                                 > </div>
+                                 <div data-netdata = "system.io" 
+                                 data-host="http://192.168.11.29:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="in"
+                                 data-title="Leitura Disco"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.io.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360"
+                                 > </div>
+                                 <div data-netdata = "system.io" 
+                                 data-host="http://192.168.11.29:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="out"
+                                 data-title="Escrita Disco"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.io.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360"
+                                 > </div>
+                                 <div data-netdata = "system.net" 
+                                 data-host="http://192.168.11.29:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="received"                 
+                                 data-title="Net In"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.net.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360" 
+                                 > </div>
+                                 <div data-netdata = "system.net" 
+                                 data-host="http://192.168.11.29:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="sent"                 
+                                 data-title="Net Out"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.net.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360" 
+                                 > </div>
+                                <div>
+                                    <a href="#">
+                                         <img src="http://192.168.11.29:19999/api/v1/badge.svg?chart=system.uptime"></img>
+                                    </a>
+                                </div>
+                        </div>     
+                    </div>    
+            </div>
                                                         <p></p>
-                                            <div class="card border-dark" style="max-width: 50rem;">
-                                                <div class="card-header">
-                                                    <button type="button" class="btn btn-info">SRV-ZABBIX</button>
-                                                </div> 
-                                                    <div class="card-body">   
-                                                        <div style="width: 100%; text-align: center;">
-                                                            <div data-netdata="system.cpu"
-                                                                 data-host="http://192.168.11.10:19999/"
-                                                                 data-dimensions="user"
-                                                                 data-chart-library="gauge"
-                                                                 data-width="150px"
-                                                                 data-after="-60"
-                                                                 data-points="60"
-                                                                 data-title="Uso Total CPU"
-                                                                 data-units="I am alive!"
-                                                                 data-gauge-max="100"
-                                                                 data-gauge-min="0"
-                                                                 data-colors="#FF4444"
-                                                             ></div>
-                                                                <div data-netdata = "system.ram" 
-                                                                 data-host="http://192.168.11.10:19999/"
-                                                                 data-chart-library="easypiechart"
-                                                                 data-title="Memoria Livre"
-                                                                 data-colors="#00FF7F"
-                                                                 data-width ="100px"
-                                                                 data-height="100px"
-                                                                 data-units="MB"
-                                                                 data-easypiechart-max-value = "16000"
-                                                                 data-easypiechart-min-value = "0" 
-                                                                 > </div>
-                                                                 <div data-netdata = "disk_util.sda" 
-                                                                 data-host="http://192.168.11.10:19999/"
-                                                                 data-chart-library="easypiechart"
-                                                                 data-title="I/O Disk"
-                                                                 data-width ="100px"
-                                                                 data-height="100px"
-                                                                 data-units="%"
-                                                                 data-easypiechart-max-value = "100"
-                                                                 data-easypiechart-min-value = "0" 
-                                                                 > </div>
-                                                        </div>     
-                                                    </div>    
-                                            </div>
-                                            <p></p>
-                                            <div class="card border-dark" style="max-width: 50rem;">
-                                                <div class="card-header">
-                                                    <button type="button" class="btn btn-info">SRV-PROXMOX-LJ2</button>
-                                                </div> 
-                                                    <div class="card-body">   
-                                                        <div style="width: 100%; text-align: center;">
-                                                            <div data-netdata="system.cpu"
-                                                                 data-host="http://192.168.12.3:19999/"
-                                                                 data-dimensions="user"
-                                                                 data-chart-library="gauge"
-                                                                 data-width="150px"
-                                                                 data-after="-60"
-                                                                 data-points="60"
-                                                                 data-title="Uso Total CPU"
-                                                                 data-units="I am alive!"
-                                                                 data-gauge-max="100"
-                                                                 data-gauge-min="0"
-                                                                 data-colors="#FF4444"
-                                                             ></div>
-                                                                <div data-netdata = "system.ram" 
-                                                                 data-host="http://192.168.12.3:19999/"
-                                                                 data-chart-library="easypiechart"
-                                                                 data-title="Memoria Livre"
-                                                                 data-colors="#00FF7F"
-                                                                 data-width ="100px"
-                                                                 data-height="100px"
-                                                                 data-units="MB"
-                                                                 data-easypiechart-max-value = "16000"
-                                                                 data-easypiechart-min-value = "0" 
-                                                                 > </div>
-                                                                 <div data-netdata = "disk_util.sda" 
-                                                                 data-host="http://192.168.12.3:19999/"
-                                                                 data-chart-library="easypiechart"
-                                                                 data-title="I/O Disk"
-                                                                 data-width ="100px"
-                                                                 data-height="100px"
-                                                                 data-units="%"
-                                                                 data-easypiechart-max-value = "100"
-                                                                 data-easypiechart-min-value = "0" 
-                                                                 > </div>
-                                                        </div>     
-                                                    </div>    
-                                            </div>    
+                        <div class="card border-dark" style="max-width: 50rem;">
+                <div class="card-header">
+                    <button type="button" class="btn btn-info">SRV-ZABBIX-GLPI</button>
+                </div> 
+                    <div class="card-body">   
+                        <div style="width: 100%; text-align: center;">
+                            <div data-netdata="system.cpu"
+                                 data-host="http://192.168.11.10:19999/"
+                                 data-dimensions="user"
+                                 data-chart-library="gauge" 
+                                 data-width="50%"
+                                 data-after="-240"
+                                 data-points="240"
+                                 data-title="Uso Total CPU"
+                                 data-units="%"
+                                 data-gauge-max-value="100"
+                                 data-colors="#FF4444"
+                                 roule="application"
+                             ></div>
+                                <div data-netdata = "system.ram" 
+                                 data-host="http://192.168.11.10:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="used|buffers|active|wired"
+                                 data-append-options="percentage"
+                                 data-title="Memoria Usada"
+                                 data-colors="#00FF7F"
+                                 data-width ="40%"
+                                 data-height="100px"
+                                 data-units="%"
+                                 data-easypiechart-max-value="100"
+                                 > </div>
+                                 <div data-netdata = "system.io" 
+                                 data-host="http://192.168.11.10:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="in"
+                                 data-title="Leitura Disco"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.io.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360"
+                                 > </div>
+                                 <div data-netdata = "system.io" 
+                                 data-host="http://192.168.11.10:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="out"
+                                 data-title="Escrita Disco"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.io.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360"
+                                 > </div>
+                                 <div data-netdata = "system.net" 
+                                 data-host="http://192.168.11.10:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="received"                 
+                                 data-title="Net In"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.net.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360" 
+                                 > </div>
+                                 <div data-netdata = "system.net" 
+                                 data-host="http://192.168.11.10:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="sent"                 
+                                 data-title="Net Out"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.net.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360" 
+                                 > </div>
+                                <div>
+                                    <a href="#">
+                                         <img src="http://192.168.11.10:19999/api/v1/badge.svg?chart=system.uptime"></img>
+                                    </a>
+                                </div>
+                        </div>     
+                    </div>    
+            </div>                                            <p></p>
+                        <div class="card border-dark" style="max-width: 50rem;">
+                <div class="card-header">
+                    <button type="button" class="btn btn-info">SRV-PROXMOX-LJ2</button>
+                </div> 
+                    <div class="card-body">   
+                        <div style="width: 100%; text-align: center;">
+                            <div data-netdata="system.cpu"
+                                 data-host="http://192.168.12.3:19999/"
+                                 data-dimensions="user"
+                                 data-chart-library="gauge" 
+                                 data-width="50%"
+                                 data-after="-240"
+                                 data-points="240"
+                                 data-title="Uso Total CPU"
+                                 data-units="%"
+                                 data-gauge-max-value="100"
+                                 data-colors="#FF4444"
+                                 roule="application"
+                             ></div>
+                                <div data-netdata = "system.ram" 
+                                 data-host="http://192.168.12.3:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="used|buffers|active|wired"
+                                 data-append-options="percentage"
+                                 data-title="Memoria Usada"
+                                 data-colors="#00FF7F"
+                                 data-width ="40%"
+                                 data-height="100px"
+                                 data-units="%"
+                                 data-easypiechart-max-value="100"
+                                 > </div>
+                                 <div data-netdata = "system.io" 
+                                 data-host="http://192.168.12.3:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="in"
+                                 data-title="Leitura Disco"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.io.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360"
+                                 > </div>
+                                 <div data-netdata = "system.io" 
+                                 data-host="http://192.168.12.3:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="out"
+                                 data-title="Escrita Disco"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.io.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360"
+                                 > </div>
+                                 <div data-netdata = "system.net" 
+                                 data-host="http://192.168.12.3:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="received"                 
+                                 data-title="Net In"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.net.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360" 
+                                 > </div>
+                                 <div data-netdata = "system.net" 
+                                 data-host="http://192.168.12.3:19999/"
+                                 data-chart-library="easypiechart"
+                                 data-dimensions="sent"                 
+                                 data-title="Net Out"
+                                 data-width ="20%"
+                                 data-height="10px"
+                                 data-common-units="system.net.mainhead"
+                                 data-before="0"
+                                 data-after="-360"
+                                 data-points="360" 
+                                 > </div>
+                                <div>
+                                    <a href="#">
+                                         <img src="http://192.168.12.3:19999/api/v1/badge.svg?chart=system.uptime"></img>
+                                    </a>
+                                </div>
+                        </div>     
+                    </div>    
+            </div>   
                                                                                
                                                                                 
 
