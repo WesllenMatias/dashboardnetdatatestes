@@ -15,6 +15,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+    <!-- Script Refresh Embed do Badge -->
+    <script>
+    var NETDATA_BADGES_AUTOREFRESH_SECONDS = 5;
+    function refreshNetdataBadges() {
+      var now = new Date().getTime().toString();
+      $('.netdata-badge').each(function() {
+        this.src = this.src.replace(/\&_=\d*/, '') + '&_=' + now;
+      });
+      setTimeout(refreshNetdataBadges, NETDATA_BADGES_AUTOREFRESH_SECONDS * 1000);
+    }
+    setTimeout(refreshNetdataBadges, NETDATA_BADGES_AUTOREFRESH_SECONDS * 1000);
+    </script>
 
     <!-- here we will add dashboard.js -->
     <script type="text/javascript" src="http://192.168.11.24:19999/dashboard.js"></script>
@@ -22,7 +34,7 @@
     <script type="text/javascript" src="http://192.168.11.5:19999/dashboard.js"></script> -->
     
 </head>
-<body>
+<body style="background-color: #4F4F4F">
 
 <nav class="navbar navbar-dark bg-dark">
   <!-- Navbar content -->
@@ -37,9 +49,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm">
-                        <div class="card border-dark" style="max-width: 50rem;">
+                        <div class="card border-dark" style="max-width: 50rem; background-color: #E8E8E8">
                 <div class="card-header">
                     <button type="button" class="btn btn-info">CPD-01</button>
+                    <iframe class="netdata-badge"src="http://192.168.11.24:19999/api/v1/badge.svg?chart=diskspace" style="border: 0" type="image/svg+xml" height="20" />
+                    </iframe>
                 </div> 
                     <div class="card-body">   
                         <div style="width: 100%; text-align: center;">
@@ -116,16 +130,15 @@
                                  data-after="-360"
                                  data-points="360" 
                                  > </div>
-                                <div>
-                                    <a href="#">
-                                         <img src="http://192.168.11.24:19999/api/v1/badge.svg?chart=system.uptime"></img>
-                                    </a>
+                                <div style="text-align: right;">
+                                    <iframe class="netdata-badge"src="http://192.168.11.24:19999/api/v1/badge.svg?chart=system.uptime" style="border: 0" type="image/svg+xml" height="20" />
+                                    </iframe>
                                 </div>
                         </div>     
                     </div>    
             </div>
             <p></p>
-                        <div class="card border-dark" style="max-width: 50rem;">
+                        <div class="card border-dark" style="max-width: 50rem; background-color: #E8E8E8">
                 <div class="card-header">
                     <button type="button" class="btn btn-info">SRV-BANCO-CISS</button>
                 </div> 
@@ -213,7 +226,7 @@
                     </div>    
             </div>            
             <p></p>
-                        <div class="card border-dark" style="max-width: 50rem;">
+                        <div class="card border-dark" style="max-width: 50rem; background-color: #E8E8E8">
                 <div class="card-header">
                     <button type="button" class="btn btn-info">SRV-PROXMOX-LJ1</button>
                 </div> 
@@ -303,7 +316,7 @@
 
         </div>
         <div class="col-sm">                                               
-                        <div class="card border-dark" style="max-width: 50rem;">
+                        <div class="card border-dark" style="max-width: 50rem; background-color: #E8E8E8">
                 <div class="card-header">
                     <button type="button" class="btn btn-info">SRV-RADIO</button>
                 </div> 
@@ -391,7 +404,7 @@
                     </div>    
             </div>
                                                         <p></p>
-                        <div class="card border-dark" style="max-width: 50rem;">
+                        <div class="card border-dark" style="max-width: 50rem; background-color: #E8E8E8">
                 <div class="card-header">
                     <button type="button" class="btn btn-info">SRV-ZABBIX-GLPI</button>
                 </div> 
@@ -478,7 +491,7 @@
                         </div>     
                     </div>    
             </div>                                            <p></p>
-                        <div class="card border-dark" style="max-width: 50rem;">
+                        <div class="card border-dark" style="max-width: 50rem; background-color: #E8E8E8">
                 <div class="card-header">
                     <button type="button" class="btn btn-info">SRV-PROXMOX-LJ2</button>
                 </div> 
@@ -573,7 +586,7 @@
                 <div class="col-sm">
             
                                    
-                                        <div class="card border-dark" style="max-width: 50rem;">
+                                        <div class="card border-dark" style="max-width: 50rem; background-color: #E8E8E8">
                                                     <div class="card-header">
                                                         <button type="button" class="btn btn-info">SRV-PROXMOX-LJ1</button>
                                                     </div> 
@@ -617,7 +630,7 @@
                                                         </div>
                                          </div>
                                                         <p></p>
-                                            <div class="card border-dark" style="max-width: 50rem;">
+                                            <div class="card border-dark" style="max-width: 50rem; background-color: #E8E8E8">
                                                 <div class="card-header">
                                                     <button type="button" class="btn btn-info">SRV-BANCO-CISS</button>
                                                 </div> 
@@ -661,7 +674,7 @@
                                                     </div>    
                                             </div>
                                             <p></p>
-                                            <div class="card border-dark" style="max-width: 50rem;">
+                                            <div class="card border-dark" style="max-width: 50rem; background-color: #E8E8E8">
                                                 <div class="card-header">
                                                     <button type="button" class="btn btn-info">SRV-PROXMOX-LJ1</button>
                                                 </div> 
